@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      function pdfdownload(){
+        $.get("https://yutampp.github.io/n1100000.pdf").then((data)=>{
+                                                               console.log(data);
+                                                               const a = document.createElement("a");
+                                                               a.href = URL.createObjectURL(data);
+                                                               a.download = "pdf";
+                                                               a.click();
+                                                             })
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="">test1</button>
+  </body>
+</html>
